@@ -39,6 +39,7 @@ function App() {
         type="text" 
         placeholder="Body"
         ref={bodyInputRef}/>
+        
     </div>
 
   )
