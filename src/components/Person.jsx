@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { fetchAction } from '../store/asyncAction/fetchAction';
 import { addPersonAction, removePersonAction } from '../store/reducers/nameReducer';
 
 const Person = () => {
@@ -31,7 +32,8 @@ const Person = () => {
         value={name}
         onChange={e => setName(e.target.value)}
       ></input>
-      <button onClick={() => addPerson(name)}>Add some</button>
+      <button onClick={() => addPerson(name)}>Add some person</button>
+      <button onClick={() => dispatch(fetchAction())}>Add many persons</button>
     </div>
   )
 };
